@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def query():
     pool = database.connect_unix_socket()
-    sql = text("INSERT INTO people VALUES ("+str("test")+",66)")
+    sql = text("""INSERT INTO people VALUES ("test",66)""")
     ll = pool.execute(sql)
     
     return "hi" 
