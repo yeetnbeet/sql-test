@@ -9,7 +9,7 @@ def query():
     pool = database.connect_unix_socket()
     sql = text("SELECT * FROM people")
     ll = pool.execute(sql)
-
+    print(ll)
     return str(ll)
 
 if __name__ == "__main__":
