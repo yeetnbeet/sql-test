@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def query():
     pool = database.connect_unix_socket()
-    sql = text("SELECT * FROM test")
+    sql = text("SELECT * FROM people")
     ll = pool.execute(sql)
 
     return str(ll)
