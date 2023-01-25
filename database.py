@@ -1,5 +1,6 @@
 import os
 import sqlalchemy
+import pymysql
 
 
 def connect_unix_socket() -> sqlalchemy.engine.base.Engine:
