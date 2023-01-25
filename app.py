@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/')
 def query():
     pool = database.connect_unix_socket()
-    sql = text("SELECT * FROM people")
+    sql = text("INSERT INTO people VALUES ("+str("test")+",66)")
     ll = pool.execute(sql)
-    print(ll)
-    return str(ll)
+    
+    return "hi" 
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 8000))
